@@ -64,25 +64,32 @@ const categoryButtons = document.querySelectorAll(".category-card");
 const categoryTitle = document.getElementById("category-title");
 const categoryDescription = document.getElementById("category-description");
 const subcategoryContainer = document.getElementById("subcategory-container");
+const panel = document.getElementById("category-panel");
+
+let isAnimating = false;
 
 
-function displayCategory(categoryName) {
-
+// UPDATE THE PANEL CONTENT
+function updateCategory(categoryName) {
     const category = categories[categoryName];
 
-    // Update heading and description
     categoryTitle.textContent = category.title;
     categoryDescription.textContent = category.description;
 
-    // Clear previous subcategories
     subcategoryContainer.innerHTML = "";
 
-    // Create subcategory cards
     category.subcategories.forEach(subcategory => {
 
         const link = document.createElement("a");
         link.classList.add("subcategory-card");
-        link.href = subcategory.link;
+
+        // Generate the URL for the motif page
+        const slug = subcategory.name
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, "-");
+
+        link.href = `motif.html?motif=${slug}`;
 
         link.innerHTML = `
             <img src="${subcategory.image}" alt="${subcategory.name}">
@@ -90,21 +97,67 @@ function displayCategory(categoryName) {
         `;
 
         subcategoryContainer.appendChild(link);
-
     });
-
-    // Update selected category outline
-    categoryButtons.forEach(button => {
-        button.classList.remove("active");
-    });
-
-    document.querySelector(
-        `[data-category="${categoryName}"]`
-    ).classList.add("active");
 }
 
 
-// Add click events to category buttons
+// DISPLAY A CATEGORY WITH ANIMATION
+
+function displayCategory(categoryName) {
+
+    if (isAnimating) return;
+
+    const category = categories[categoryName];
+
+    if (!category) return;
+
+    isAnimating = true;
+
+    // Update selected category outline
+    categoryButtons.forEach(button => {
+        button.classList.toggle(
+            "active",
+            button.dataset.category === categoryName
+        );
+    });
+
+    // Slide current panel upwards and fade out
+    gsap.to(panel, {
+        y: -40,
+        opacity: 0,
+        duration: 0.3,
+        ease: "power2.in",
+
+        onComplete: () => {
+
+            // Update panel content
+            updateCategory(categoryName);
+
+            // Position panel above its original position
+            gsap.set(panel, {
+                y: -40
+            });
+
+            // Slide new panel down and fade in
+            gsap.to(panel, {
+                y: 0,
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out",
+
+                onComplete: () => {
+                    isAnimating = false;
+                }
+            });
+
+        }
+    });
+
+}
+
+
+
+// CATEGORY BUTTON CLICK EVENTS
 categoryButtons.forEach(button => {
 
     button.addEventListener("click", () => {
@@ -118,5 +171,12 @@ categoryButtons.forEach(button => {
 });
 
 
-// Display Location when the page first loads
-displayCategory("location");
+// INITIAL CATEGORY (WITHOUT ANIMATION)
+updateCategory("location");
+
+categoryButtons.forEach(button => {
+    button.classList.toggle(
+        "active",
+        button.dataset.category === "location"
+    );
+});
