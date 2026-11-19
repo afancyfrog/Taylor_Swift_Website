@@ -499,6 +499,7 @@ footer p {
     pointer-events: none;
     will-change: transform;
 }
+<<<<<<< Updated upstream
 
 
 body > *:not(.parallax-background):not(.page-transition) {
@@ -510,3 +511,5 @@ body > *:not(.parallax-background):not(.page-transition) {
 .page-transition {
     z-index: 99999;
 }
+=======
+>>>>>>> Stashed changes
