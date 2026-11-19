@@ -1,4 +1,11 @@
 
+const API_BASE_URL =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+        ? "http://localhost:3000"
+        : "https://taylor-swift-archive.onrender.com";
+
+
 // ==========================================
 // MOTIF DATA
 // ==========================================
@@ -1695,6 +1702,124 @@ moon: {
 
 };
 
+async function fetchDiscogsRelease(release) {
+
+    // Search Discogs
+    const params = new URLSearchParams({
+        searchTerm: release.searchTerm,
+        album: release.album
+    });
+
+    const searchResponse = await fetch(
+        `${API_BASE_URL}/api/discogs/search?${params}`
+    );
+
+    if (!searchResponse.ok) {
+        throw new Error("Discogs search failed");
+    }
+
+    const searchData = await searchResponse.json();
+
+    if (!searchData.results || searchData.results.length === 0) {
+        return null;
+    }
+
+    // Find the closest matching result
+    const searchTerm = release.searchTerm.toLowerCase();
+
+    const match = searchData.results.find(result =>
+        result.title.toLowerCase().includes(searchTerm)
+    ) || searchData.results[0];
+
+    // Retrieve full release details
+    const detailResponse = await fetch(
+        `${API_BASE_URL}/api/discogs/releases/${match.id}`
+    );
+
+    if (!detailResponse.ok) {
+        throw new Error("Could not retrieve release details");
+    }
+
+    const details = await detailResponse.json();
+
+    // Find the primary release image
+    const primaryImage = details.images?.find(
+        image => image.type === "primary"
+    ) || details.images?.[0];
+
+    // Return combined information
+    return {
+        ...release,
+
+        image: primaryImage?.uri || match.cover_image || "",
+
+        releaseDate: details.released || details.year || "Not specified",
+
+        formats: details.formats?.map(format => format.name) || []
+    };
+}
+
+async function loadPhysicalReleases() {
+
+    const container = document.getElementById("physical-releases");
+
+    container.textContent = "Loading physical releases...";
+
+    const searches = motif.physicalReleaseSearch || [];
+
+    if (searches.length === 0) {
+        displayEmptyMessage(container);
+        return;
+    }
+
+    // Search for all releases
+    const results = await Promise.allSettled(
+        searches.map(release => fetchDiscogsRelease(release))
+    );
+
+    const successfulReleases = [];
+    let failedCount = 0;
+
+    results.forEach(result => {
+
+        if (result.status === "fulfilled" && result.value) {
+            successfulReleases.push(result.value);
+        } else if (result.status === "rejected") {
+            failedCount++;
+            console.error(result.reason);
+        }
+
+    });
+
+    if (successfulReleases.length === 0) {
+
+        if (failedCount > 0) {
+            container.textContent =
+                "Unable to load physical releases. Please try again later.";
+        } else {
+            displayEmptyMessage(container);
+        }
+
+        return;
+    }
+
+    // Display successful results
+    motif.physicalReleases = successfulReleases;
+
+    displayPhysicalReleases();
+
+    // Show partial failure information
+    if (failedCount > 0) {
+        const message = document.createElement("p");
+
+        message.className = "empty-message";
+        message.textContent =
+            `${failedCount} release(s) could not be loaded.`;
+
+        container.appendChild(message);
+    }
+}
+
 
 // ==========================================
 // GET SELECTED MOTIF
@@ -1737,9 +1862,9 @@ function loadMotif() {
 
 
     // Load sections
-    displayPhysicalReleases();
-    displaySongTitles();
-    displayLyrics();
+    loadPhysicalReleases();
+displaySongTitles();
+displayLyrics();
 
 }
 
