@@ -4,14 +4,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 // BACKGROUND PARALLAX
 gsap.to(".parallax-background", {
-    y: 150,
+    y: -40,
     ease: "none",
 
     scrollTrigger: {
-        trigger: document.documentElement,
+        trigger: document.body,
         start: "top top",
-        end: () => ScrollTrigger.maxScroll(window),
-        scrub: 1
+        end: "bottom bottom",
+        scrub: 2
     }
 });
 
