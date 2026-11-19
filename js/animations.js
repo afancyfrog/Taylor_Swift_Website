@@ -1,4 +1,19 @@
+// REGISTER PLUGINS
 gsap.registerPlugin(ScrollTrigger);
+
+
+// BACKGROUND PARALLAX
+gsap.to(".parallax-background", {
+    y: 150,
+    ease: "none",
+
+    scrollTrigger: {
+        trigger: document.documentElement,
+        start: "top top",
+        end: () => ScrollTrigger.maxScroll(window),
+        scrub: 1
+    }
+});
 
 // Find all sections that should animate
 const sections = document.querySelectorAll("section");
@@ -41,16 +56,3 @@ sections.forEach(section => {
 
 });
 
-// BACKGROUND PARALLAX
-
-gsap.to(".parallax-background", {
-    yPercent: 15,
-    ease: "none",
-
-    scrollTrigger: {
-        trigger: "body",
-        start: "top top",
-        end: "bottom bottom",
-        scrub: true
-    }
-});
