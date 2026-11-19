@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taylor Swift Thematic Music Archive</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/motifs.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+    <script src="js/animations.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="site-name">
+            Taylor Swift Thematic Music Archive
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discover.html">Motifs</a>
+        </nav>
+    </header>
+
+   <main class="page-container">
+
+    <section class="motifs-hero">
+
+    <img src="images/motifs-hero.jpg" alt="">
+
+    <div class="motifs-hero-text">
+        <h1>
+            <span class="explore-word">Explore</span>
+            <span class="motifs-word">Motifs</span>
+        </h1>
+    </div>
+
+</section>
+
+    <section class="motifs-page">
+
+        <!-- Main Categories -->
+        <div class="category-container">
+
+            <button class="category-card active" data-category="location">
+                <img src="images/location.png" alt="">
+                <p>Location</p>
+            </button>
+
+            <button class="category-card" data-category="space">
+                <img src="images/space.png" alt="">
+                <p>Space</p>
+            </button>
+
+            <button class="category-card" data-category="weather">
+                <img src="images/weather.png" alt="">
+                <p>Weather</p>
+            </button>
+
+            <button class="category-card" data-category="colours">
+                <img src="images/colours.png" alt="">
+                <p>Colours</p>
+            </button>
+
+            <button class="category-card" data-category="time">
+                <img src="images/time.jpg" alt="">
+                <p>Time</p>
+            </button>
+
+        </div>
+
+        <!-- Category Information Panel -->
+        <section class="category-panel" id="category-panel">
+
+            <h2 id="category-title">Location</h2>
+
+            <p id="category-description">
+                Explore the places and environments that appear throughout Taylor Swift's music.
+            </p>
+
+            <div class="subcategory-container" id="subcategory-container">
+                <!-- Subcategories are added with JavaScript -->
+            </div>
+
+        </section>
+
+    </section>
+
+</main>
+   
+    <!-- Footer -->
+    <footer>
+        <p>
+            All images, album artwork, and related media are the property
+            of Taylor Swift and their respective copyright holders.
+            This is an unofficial fan-made project and is not affiliated
+            with or endorsed by Taylor Swift or her team.
+            All rights belong to their respective owners.
+        </p>
+    </footer>
+
+</body>
+</html>

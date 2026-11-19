@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Motif | Taylor Swift Thematic Music Archive</title>
+
+    <!-- Your existing global stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Motif detail page stylesheet -->
+     <link rel="stylesheet" href="css/motif-detail.css">
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+    <script src="js/animations.js" defer></script>
+
+</head>
+
+<body>
+
+     <!-- Navigation -->
+    <header class="navbar">
+        <div class="site-name">
+            Taylor Swift Thematic Music Archive
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="discover.html">Motifs</a>
+        </nav>
+    </header>
+
+
+    <main class="motif-page">
+
+        <!-- HERO -->
+        <section class="motif-hero">
+
+            <img id="motif-hero-image" src="" alt="">
+
+            <div class="motif-hero-content">
+                <h1 id="motif-title"></h1>
+
+                <p id="motif-description"></p>
+            </div>
+
+        </section>
+
+
+        <!-- PHYSICAL RELEASES -->
+        <section class="motif-section physical-section">
+
+            <h2 class="section-heading">
+                <span>Related</span>
+                <span>Physical Release</span>
+            </h2>
+
+            <div id="physical-releases" class="physical-releases">
+            </div>
+
+        </section>
+
+
+        <!-- SONG TITLES -->
+        <section class="motif-section songs-section">
+
+            <h2 class="section-heading">
+                <span>Related</span>
+                <span>Song Titles</span>
+            </h2>
+
+            <div id="song-titles" class="song-titles">
+            </div>
+
+        </section>
+
+
+        <!-- LYRICS -->
+        <section class="motif-section lyrics-section">
+
+            <div class="lyrics-image">
+                <img
+                    src="images/lyrics-image.jpg"
+                    alt="Taylor Swift"
+                >
+            </div>
+
+            <div class="lyrics-content">
+
+                <h2>Lyrics</h2>
+
+                <div id="lyrics-list" class="lyrics-list">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            All images, album artwork, and related media are the property
+            of Taylor Swift and their respective copyright holders.
+            This is an unofficial fan-made project and is not affiliated
+            with or endorsed by Taylor Swift or her team.
+            All rights belong to their respective owners.
+        </p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/motif-detail.js"></script>
+
+</body>
+</html>
