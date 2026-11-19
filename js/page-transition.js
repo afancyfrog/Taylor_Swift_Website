@@ -2,23 +2,19 @@ const transitionOverlay = document.querySelector(".page-transition");
 
 if (transitionOverlay) {
 
-    // PAGE LOAD
+    // REVEAL PAGE ON LOAD
     window.addEventListener("load", () => {
 
-        gsap.set(transitionOverlay, {
-            xPercent: 0
-        });
-
         gsap.to(transitionOverlay, {
-            xPercent: 100,
-            duration: 0.7,
-            ease: "power2.inOut"
+            opacity: 0,
+            duration: 0.6,
+            ease: "power1.out"
         });
 
     });
 
 
-    // PAGE EXIT
+    // FADE OUT WHEN NAVIGATING
     document.addEventListener("click", (event) => {
 
         const link = event.target.closest("a");
@@ -43,9 +39,10 @@ if (transitionOverlay) {
         event.preventDefault();
 
         gsap.to(transitionOverlay, {
-            xPercent: 0,
-            duration: 0.7,
-            ease: "power2.inOut",
+            opacity: 1,
+            duration: 0.6,
+            ease: "power1.inOut",
+
             onComplete: () => {
                 window.location.href = destination.href;
             }
