@@ -18,7 +18,7 @@ const motifs = {
 
     description: "Stars and celestial imagery are often used in Taylor Swift's music to describe admiration, romance and idealised perceptions of another person. References to starry eyes, eyes filled with stars and looking at someone like the stars create imagery of wonder, affection and seeing someone as extraordinary.",
 
-    physicalReleases: [],
+   physicalReleaseSearch: [],
 
     songTitles: [],
 
@@ -86,7 +86,7 @@ moon: {
 
     description: "The moon frequently appears in Taylor Swift's music as a symbol of romance, mystery, longing and the passage of time. It is often associated with nighttime, dreams and distant connections, while lunar imagery can also reflect changing emotions and relationships.",
 
-    physicalReleases: [
+    physicalReleaseSearch: [
          {
             album: "Midnights",
             searchTerm: "Moonstone Blue",
@@ -191,7 +191,7 @@ moon: {
 
     description: "Rain is a recurring motif in Taylor Swift's music, often representing sadness, heartbreak, emotional conflict and difficult periods in relationships. However, rain can also symbolise renewal, cleansing, change and the possibility of moving forward.",
 
-    physicalReleases: [],
+    physicalReleaseSearch: [],
 
     songTitles: [],
 
@@ -450,7 +450,7 @@ moon: {
 
     description: "Sunshine and sunlight frequently appear in Taylor Swift's music, representing warmth, happiness, hope, love and clarity. The sun can also symbolise the passing of time, changing relationships and the contrast between light and darkness.",
 
-    physicalReleases: [],
+    physicalReleaseSearch: [],
 
     songTitles: [],
 
@@ -650,7 +650,7 @@ moon: {
 
     description: "Clouds often appear in Taylor Swift's music as imagery associated with uncertainty, dreams, distance and changing emotions. They can represent something obscured or unreachable, but can also create a sense of wonder and possibility.",
 
-    physicalReleases: [],
+    physicalReleaseSearch: [],
 
     songTitles: [
          {
@@ -695,7 +695,7 @@ moon: {
 
     description: "Red is a recurring colour in Taylor Swift's music, often representing intense love, passion, heartbreak, anger and memories. Through shades such as scarlet, crimson, burgundy and maroon, red can communicate different emotional experiences.",
 
-    physicalReleases: [
+    physicalReleaseSearch: [
     {
         searchTerm: "Red",
         album: "Red",
@@ -937,7 +937,7 @@ moon: {
 
     description: "The colour blue is often associated with sadness, longing, romance and nostalgia throughout Taylor Swift's music. It can also represent beauty, memory and emotional connection.",
 
-    physicalReleases: 
+    physicalReleaseSearch: 
     [
          {
     searchTerm: "Clear Skies Blue",
@@ -1201,7 +1201,7 @@ moon: {
         description:
             "Taylor Swift often uses this colour to symbolize romance or the idea of 'rose coloured glasses'.",
 
-        physicalReleases: [
+        physicalReleaseSearch: [
            
              {
         searchTerm: "Rose Garden Pink",
@@ -1271,7 +1271,7 @@ moon: {
         description:
             "Taylor Swift often uses this colour to symbolize something that is new, fresh or naive. In other cases it can refer to something that lasts forever.",
 
-        physicalReleases: [
+        physicalReleaseSearch: [
             {
     searchTerm: "Jade Green",
     album: "Midnights",
@@ -1355,7 +1355,7 @@ moon: {
         description:
             "Taylor Swift often uses this decade as a metaphor for strict societal rules and expectations placed on her due to gender.",
 
-        physicalReleases: [
+        physicalReleaseSearch: [
           
         ],
 
@@ -1392,7 +1392,7 @@ moon: {
         description:
             "Taylor Swift often uses this time to reference staying up late, being haunted by old memories",
 
-        physicalReleases: [
+        physicalReleaseSearch: [
             {
     searchTerm: "Midnights (3am Edition)",
     album: "Midnights",
@@ -1434,7 +1434,7 @@ moon: {
         description:
             "Taylor Swift often uses a mall to convey themes of teenage nostalgia and innocence. The mall was a common place for teenagers to hang out.",
 
-        physicalReleases: [
+        physicalReleaseSearch: [
            {
     searchTerm: "Meet Me Behind The Mall",
     album: "Folklore",
@@ -1477,7 +1477,7 @@ moon: {
         description:
             "The woods are a location used in 2 main ways. Firstly as a place to find refuge/escape, and secondly as a place you physically cannot escape from.",
 
-        physicalReleases: 
+        physicalReleaseSearch: 
         [
              {
     searchTerm: "In The Trees",
@@ -1537,7 +1537,7 @@ moon: {
         description:
             "The Resturaunt is used as a primary location for dates. Often used in hindsight to reflect on the positives the relationship once had.",
 
-        physicalReleases: [],
+        physicalReleaseSearch: [],
         songTitles: [],
         lyrics: 
         [
@@ -1582,7 +1582,7 @@ moon: {
         description:
             "This location is often used to indicate reflection, delusion of wanting someoneto come back or the breaking down of a relationship.",
 
-        physicalReleases: [],
+        physicalReleaseSearch: [],
         songTitles: [],
         lyrics: [
             {
@@ -1656,7 +1656,7 @@ moon: {
         description:
             "Beaches are often used to describe something that is beautiful but dangerous at the same time.",
 
-        physicalReleases: [],
+        physicalReleaseSearchs: [],
         songTitles: 
         [
             {
