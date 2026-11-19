@@ -107,7 +107,7 @@ const categories = {
         description: "Explore motifs connected to time.",
         subcategories: [
                  {
-                name: "3 AM",
+                name: "3am",
                 image: "images/3am.png",
                 link: "motifs/3am.html"
             },

@@ -12,7 +12,7 @@ const API_BASE_URL =
 
 const motifs = {
   
-    starryeyes: {
+    "starry-eyes": {
     title: "Starry Eyes",
     image: "images/starry-eyes.webp",
 
@@ -689,7 +689,7 @@ moon: {
     ]
 },
   
-    reds: {
+    red: {
     title: "Red",
     image: "images/red.webp",
 
@@ -937,8 +937,7 @@ moon: {
 
     description: "The colour blue is often associated with sadness, longing, romance and nostalgia throughout Taylor Swift's music. It can also represent beauty, memory and emotional connection.",
 
-    physicalReleaseSearch: 
-    [
+   physicalReleaseSearchs:[
          {
     searchTerm: "Clear Skies Blue",
     album: "1989 (Taylor's Version)",
