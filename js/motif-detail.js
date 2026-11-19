@@ -1916,12 +1916,12 @@ function displayPhysicalReleases() {
 
                 <img
                     src="${release.image}"
-                    alt="${release.name}"
+                    alt="${release.name || release.searchTerm }"
                 >
 
                 <div class="physical-release-info">
 
-                    <h3>${release.name}</h3>
+                    <h3>${release.searchTerm || release.name}</h3>
 
                     <p class="release-album">
                         ${release.album}
