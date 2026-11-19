@@ -11,7 +11,7 @@ const categories = {
                 link: "motifs/woods.html"
             },
             {
-                name: "House",
+                name: "Resturaunt",
                 image: "images/house.png",
                 link: "motifs/house.html"
             },
@@ -36,25 +36,88 @@ const categories = {
     space: {
         title: "Space",
         description: "Explore motifs connected to space.",
-        subcategories: []
+        subcategories: 
+        [
+             {
+                name: "Moon",
+                image: "images/moon.png",
+                link: "motifs/moon.html"
+            },
+            {
+                name: "Starry Eyes",
+                image: "images/starryeyes.png",
+                link: "motifs/starryeyes.html"
+            }
+        ]
     },
 
     weather: {
         title: "Weather",
         description: "Explore motifs connected to weather.",
-        subcategories: []
+        subcategories: 
+        [
+               {
+                name: "Sunshine",
+                image: "images/sunshine.png",
+                link: "motifs/sunshine.html"
+            },
+            {
+                name: "Rain",
+                image: "images/rain.png",
+                link: "motifs/rain.html"
+            },
+            {
+                name: "Clouds",
+                image: "images/clouds.png",
+                link: "motifs/clouds.html"
+            }
+        ]
     },
 
     colours: {
         title: "Colours",
         description: "Explore motifs connected to colour.",
-        subcategories: []
+        subcategories: 
+        [
+                {
+                name: "Pink",
+                image: "images/pink.png",
+                link: "motifs/pink.html"
+            },
+            {
+                name: "Blue",
+                image: "images/blue.png",
+                link: "motifs/blue.html"
+            },
+            {
+                name: "Red",
+                image: "images/red.png",
+                link: "motifs/red.html"
+            },
+            {
+                name: "Green",
+                image: "images/green.png",
+                link: "motifs/green.html"
+            }
+        ]
     },
 
     time: {
         title: "Time",
         description: "Explore motifs connected to time.",
-        subcategories: []
+        subcategories: [
+                 {
+                name: "3 AM",
+                image: "images/3am.png",
+                link: "motifs/3am.html"
+            },
+            {
+                name: "1950s",
+                image: "images/1950s.png",
+                link: "motifs/1950s.html"
+            }
+            
+        ]
     }
 
 };
