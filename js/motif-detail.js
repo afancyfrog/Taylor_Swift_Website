@@ -14,7 +14,7 @@ const motifs = {
   
     starryeyes: {
     title: "Starry Eyes",
-    image: "images/starry-eyes.jpg",
+    image: "images/starry-eyes.webp",
 
     description: "Stars and celestial imagery are often used in Taylor Swift's music to describe admiration, romance and idealised perceptions of another person. References to starry eyes, eyes filled with stars and looking at someone like the stars create imagery of wonder, affection and seeing someone as extraordinary.",
 
@@ -690,8 +690,8 @@ moon: {
 },
   
     reds: {
-    title: "Reds",
-    image: "images/reds.jpg",
+    title: "Red",
+    image: "images/red.webp",
 
     description: "Red is a recurring colour in Taylor Swift's music, often representing intense love, passion, heartbreak, anger and memories. Through shades such as scarlet, crimson, burgundy and maroon, red can communicate different emotional experiences.",
 
@@ -1196,7 +1196,7 @@ moon: {
 
     pink: {
         title: "Pink",
-        image: "images/mall1.jpg",
+        image: "images/pink.jpg",
 
         description:
             "Taylor Swift often uses this colour to symbolize romance or the idea of 'rose coloured glasses'.",
@@ -1266,7 +1266,7 @@ moon: {
 
    green: {
         title: "Green",
-        image: "images/mall1.jpg",
+        image: "images/green.jpg",
 
         description:
             "Taylor Swift often uses this colour to symbolize something that is new, fresh or naive. In other cases it can refer to something that lasts forever.",
@@ -1350,7 +1350,7 @@ moon: {
    
     "1950s": {
         title: "The 1950s",
-        image: "images/mall1.jpg",
+        image: "images/1950s.jpg",
 
         description:
             "Taylor Swift often uses this decade as a metaphor for strict societal rules and expectations placed on her due to gender.",
@@ -1387,7 +1387,7 @@ moon: {
 
        "3am": {
         title: "3 am",
-        image: "images/mall1.jpg",
+        image: "images/3am.webp",
 
         description:
             "Taylor Swift often uses this time to reference staying up late, being haunted by old memories",
@@ -1472,7 +1472,7 @@ moon: {
 
     woods: {
         title: "The Woods",
-        image: "images/woods.png",
+        image: "images/woods.jpg",
 
         description:
             "The woods are a location used in 2 main ways. Firstly as a place to find refuge/escape, and secondly as a place you physically cannot escape from.",
@@ -1532,7 +1532,7 @@ moon: {
 
     resturaunt: {
         title: "The Resturaunt",
-        image: "images/house.png",
+        image: "images/resturaunt.jpg",
 
         description:
             "The Resturaunt is used as a primary location for dates. Often used in hindsight to reflect on the positives the relationship once had.",
@@ -1577,7 +1577,7 @@ moon: {
 
     hallway: {
         title: "The Hallway",
-        image: "images/hallway.png",
+        image: "images/Hallway.jpg",
 
         description:
             "This location is often used to indicate reflection, delusion of wanting someoneto come back or the breaking down of a relationship.",
@@ -1651,7 +1651,7 @@ moon: {
 
     beach: {
         title: "The Beach",
-        image: "images/beach.png",
+        image: "images/beach.webp",
 
         description:
             "Beaches are often used to describe something that is beautiful but dangerous at the same time.",
