@@ -352,7 +352,7 @@ footer p {
 /* Subcategory layout */
 .subcategory-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px,240px));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
 }
 
